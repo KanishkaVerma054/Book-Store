@@ -11,11 +11,12 @@ const app = express();
 app.use(express.json())
 
 // Middleware for handling CORS Policy
-app.use(cors({
-    origin: 'http://localhost:3000',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type']
-}))
+// app.use(cors({
+//     origin: 'http://localhost:3000',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Content-Type']
+// }))
+app.use(cors())
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Book Store')
